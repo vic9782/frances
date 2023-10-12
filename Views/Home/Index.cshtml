@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/Index.css">
+
+    <!-- Tu encabezado existente -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="centered">
+        <h1 class="espera">
+            BIENVENUE<br />
+            C'est notre blog de français
+        </h1>
+    </div>
+
+    <!-- Agregar un script para redirigir después de la animación -->
+    <script>
+        setTimeout(function () {
+            const h1 = document.querySelector('h1');
+            h1.classList.remove('espera');
+            h1.classList.add('dispersion');
+        }, 2000); // 2000 ms (2 segundos) para esperar antes de aplicar la dispersión
+        setTimeout(function () {
+            window.location.href = '@Url.Action("About", "Home")';
+        }, 4000); // 4000 ms (4 segundos) para redirigir después de la animación de dispersión
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.centered {
+    text-align: center;
+}
+
+@keyframes dispersion {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes espera {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50%, 99% {
+        opacity: 0;
+    }
+}
+
+.h1.espera, h1.dispersion {
+    animation-duration: 2s; /* Ajusta la duración de la animación según tus preferencias */
+    animation-timing-function: ease-in-out; /* Ajusta la función de temporización según tus preferencias */
+    animation-fill-mode: both;
+}

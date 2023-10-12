@@ -1,0 +1,128 @@
+﻿
+
+
+.grid-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+}
+.gridnao {
+    display: flex;
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    justify-content: center; /* Alinea horizontalmente en el centro */
+    min-height: 100px;
+}
+
+/* Estilos para el carrusel */
+.carousel-container {
+    max-width: 400px; /* Ancho máximo del carrusel */
+    overflow: hidden; /* Ocultar las imágenes que se desborden */
+    margin-top: 20px;
+}
+
+.carousel {
+    display: flex; /* Mostrar las imágenes en línea */
+    transition: transform 1s ease-in-out; /* Transición suave para el desplazamiento */
+}
+
+ .carousel img {
+        width: 100%;
+        height: auto;
+    }
+
+
+
+
+.menu-container-custom {
+    /* Agrega tus estilos específicos para el menú aquí */
+}
+
+.menu-custom {
+    /* Estilos específicos para el menú aquí */
+}
+
+/* Estilos para el contenedor principal */
+.main-container-custom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+p {
+    line-height: 1.5;
+    font-size: 18px;
+}
+/* Estilos para el carrusel */
+.carousel-container-custom {
+    max-width: 600px; /* Ancho máximo del carrusel */
+    overflow: hidden; /* Ocultar las imágenes que se desborden */
+    text-align: center;
+}
+
+.carousel-custom {
+    display: flex; /* Mostrar las imágenes en línea */
+    transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1); /* Transición personalizada para el desplazamiento */
+    justify-content: flex-start; /* Alinea las imágenes a la izquierda */
+    height: 400px; /* Altura fija para el carrusel */
+}
+
+    .carousel-custom img {
+        width: 100%;
+        height: auto;
+        max-height: 400px; /* Altura máxima de las imágenes */
+        object-fit: cover; /* Escalar y recortar las imágenes para que encajen */
+        display: none; /* Ocultar todas las imágenes por defecto */
+    }
+
+        .carousel-custom img:first-child {
+            display: block; /* Mostrar la primera imagen */
+        }
+
+/* Estilos para el texto debajo del carrusel */
+.text-container-custom {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.text-custom {
+    /* Estilos específicos para el párrafo aquí, si es necesario */
+}
+
+ol {
+    padding-left: 0; /* Elimina el espacio predeterminado a la izquierda de la lista */
+}
+
+li {
+    list-style-position: inside; /* Coloca los números dentro del área de contenido */
+    padding-left: 0; /* Elimina el espacio interno predeterminado */
+    text-align: center; /* Alinea el contenido en el centro */
+}
+
+.temblor {
+    animation: temblor 0.5s infinite;
+}
+
+@keyframes temblor {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(2px, -2px);
+    }
+
+    50% {
+        transform: translate(-2px, 2px);
+    }
+
+    75% {
+        transform: translate(2px, -2px);
+    }
+
+    100% {
+        transform: translate(-2px, 2px);
+    }
+}

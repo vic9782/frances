@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/Styles.css">
+
+    <meta charset="utf-8" />
+    
+</head>
+<body>
+    <!-- Contenedor del menú con margen superior -->
+    <div class="menu-container-custom">
+        <!-- Menú (si tienes uno) -->
+        <div class="menu-custom">
+            <!-- Coloca aquí tu menú -->
+        </div>
+    </div>
+
+    <!-- Contenedor principal con margen superior -->
+    <div class="main-container-custom">
+        <div class="carousel-container-custom">
+            <div class="carousel-custom">
+                <img src="~/Resources/salud1.png" alt="salud1">
+                <img src="~/Resources/salud2.png" alt="salud2">
+            </div>
+        </div>
+        <div class="text-container-custom">
+            <div class="text-custom">
+                    <p>
+                        Assurer une vie saine et promouvoir le bien-être de tous à tous les àges, est important pour la construction de sociétés prosperès.
+                    </p>
+                    <p>
+                        La santé est un état de bien-être physique, mental et social complet, et pas seulement l´absence d´affections ou de maladies. <br />
+                        La jouissance du degré maximun de santé qui peut être atteint est l´un des troits fondamentaux de tout être humain sans distrinction de race,<br />
+                        de religión, d´idéologie politiqueo u de statut économique social.
+                    </p>
+                    <h4>
+                        <strong>
+                            ¿Pourquoi la santé et le bien-être sont importants?
+                        </strong>
+                    </h4>
+                    <p>
+                        Notre bien-être physique et mental est fundamental pour pouvoir développer pleinement nos activités, faire face au de la vie quotidienne, <br />
+                        être productif dans le domaine professionnel et personnel et contribuer ainsi de manière très positive à la société.
+                    </p>
+                    <h4>
+                        <strong>
+                            Comment nous pouvons améliorer la santé et le bien-être ?
+                        </strong>
+                    </h4>
+                    <p>
+                        L´organisation mondiale de la santé émet 12 conseils pour une bonne santé :<br />
+                    </p>
+                    <ol>
+                        <li>
+                            Suivre une alimentation saine.<br /><br />
+                            <img src="~/Resources/salud3.png" alt="Imagen 1">
+                            <br /><br />
+                        </li>
+                        <li>
+                            Rester physiquement actif, au quotidien et chacun à sa manière.<br /><br />
+                            <img src="~/Resources/salud4.png" alt="Imagen 2">
+                            <br /><br />
+                        </li>
+                        <li>
+                            Se faire vacciner. <br />
+                            <br />
+                            <img src="~/Resources/salud5.png" alt="Imagen 3">
+                            <br /><br />
+
+                        </li>
+                        <li>
+                            Ne pas consommer de tabac sous aucune de ses formes.<br /><br />
+                            <img src="~/Resources/salud6.png" alt="Imagen 4">
+                            <br /><br />
+
+                        </li>
+                        <li>
+                            Éviter la consommation d´alcool au la réduire.<br /><br />
+                            <img src="~/Resources/salud7.png" alt="Imagen 5">
+                            <br /><br />
+
+                        </li>
+                        <li>
+                            Gérer le stress pour une meilleure santé physique et mentale.<br /><br />
+                            <img src="~/Resources/salud8.png" alt="Imagen 3">
+                            <br /><br />
+
+                        </li>
+                        <li>
+                            Maintenir une bonne hygiène.<br /><br />
+                            <img src="~/Resources/salud9.png" alt="Imagen 3">
+                            <br /><br />
+
+                        </li>
+                        <li>
+                            Ne pas conduire à une vitesse excessive ou sous l´influence de l´alcool.<br /><br />
+                            <img src="~/Resources/salud10.png" alt="Imagen 3">
+                            <br /><br />
+
+                        </li>
+                        <li>
+                            Attacher la ceinture de sécurité dans la voiture et mettre un casque en faisant du vélo.<br /><br />
+                            <img src="~/Resources/salud11.png" alt="Imagen 3">
+                            <br /><br />
+
+                        </li>
+                        <li>
+                            Maintenir des pratiques sexuelles sûres.<br /><br />
+                            <img src="~/Resources/salud12.png" alt="Imagen 3">
+                            <br /><br />
+
+                        </li>
+                        <li>
+                            Se soumettre à des examens médicaux réguliers.<br /><br />
+                            <img src="~/Resources/salud13.png" alt="Imagen 3">
+                            <br /><br />
+
+                        </li>
+                        <li>
+                            Allaiter les bébés c´est mieux pour eux.<br /><br />
+                            <img src="~/Resources/salud14.png" alt="Imagen 3">
+                            <br /><br />
+
+                        </li>
+
+                        <!-- Agrega más pasos con imágenes según sea necesario -->
+                    </ol>
+                    <p>
+                        De plus, les habitudes de santé et de bien-être constituent le meilleur moyen de prévenir de nombreuses maladies.<br />
+                        Un rapport de l´organisation mondiale de la santé assure que les pathologies cardiovasculaires étroitement liées à la sédentarité et à la mauvaise alimentation<br />
+                        , ils constituent la principale cause de décès dans le monde.
+                    </p>
+                    <p>
+                        <br />
+                        <br />
+                        <strong>
+                            «  Prendre soin de notre santé est essentiel pour avoir une bonne qualité de vie «
+                        </strong>
+                    </p>
+
+              
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>
+            <br />
+            José Martín Alfaro Pérez
+        </p>
+    </footer>
+    <script>
+        const carousel = document.querySelector(".carousel-custom");
+        const images = document.querySelectorAll(".carousel-custom img");
+        let currentIndex = 0;
+
+        function showNextImage() {
+            // Oculta todas las imágenes
+            images.forEach((img) => (img.style.display = "none"));
+
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].style.display = "block"; // Muestra la imagen actual
+        }
+
+        setInterval(showNextImage, 3000); // Cambiar la imagen cada 3 segundos (ajusta el valor según tus preferencias)
+    </script>
+    <script>
+        // Redirige a la vista ViewNahomi en el controlador Home después de 5 segundos
+        setTimeout(function () {
+            window.location.href = '/Home/ViewNahomi'; // Ajusta la URL según tu configuración de rutas
+        }, 5000); // 5000 milisegundos = 5 segundos
+    </script>
+</body>
+</html>

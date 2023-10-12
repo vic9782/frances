@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/Styles.css">
+
+    <meta charset="utf-8" />
+    <title>L'anneau by Samsung</title>
+</head>
+<body>
+    <!-- Menú (si tienes uno) -->
+    <div class="menu">
+        <!-- Coloca aquí tu menú -->
+    </div>
+
+    <!-- Contenedor del grid con margen superior -->
+    <div class="grid-container">
+        <div class="text">
+            <h1>L'anneau by Samsung</h1>
+            <p>Selon le brevet, la bague Samsung aurait un capteur optique qui mesurerait la fréquence cardiaque et, en outre, aurait la possibilité d’effectuer des électrocardiogrammes. C’est quelque chose que nous avons vu dans les dernières montres de la société, telles que la Galaxy Watch 5 Pro.</p>
+        </div>
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="/Resources/anillo.jpeg" alt="Imagen de ejemplo">
+                <img src="/Resources/descarga.jpeg" alt="des">
+                <img src="/Resources/samsung.png" alt="sam">
+                <img src="/Resources/prototipo.jpeg" alt="prop">
+            </div>
+        </div>
+    </div>
+    <br />
+    <a href="https://www.xatakandroid.com/gadgets-android/samsung-patenta-galaxy-ring-anillo-inteligente-funciones-salud-conexion-otros-dispositivos" class="enlace-estilizado" target="_blank">Xakata</a>
+
+    <footer>
+        <p>
+            <br />
+            Luis Vicente De La cruz Martínez ;)
+        </p>
+    </footer>
+
+    <script>
+        const carousel = document.querySelector(".carousel");
+        const images = document.querySelectorAll(".carousel img");
+        let currentIndex = 0;
+
+        function showNextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            const translateXValue = -currentIndex * 100; // Mover el carrusel en función del índice
+            carousel.style.transform = `translateX(${translateXValue}%)`;
+        }
+
+        setInterval(showNextImage, 3000); // Cambiar la imagen cada 3 segundos (ajusta el valor según tus preferencias)
+    </script>
+</body>
+</html>
